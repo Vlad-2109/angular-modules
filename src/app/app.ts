@@ -1,17 +1,14 @@
 import { Component } from '@angular/core';
 
 import { DUMMY_USERS } from './dummy-users';
-import { HeaderComponent } from './header';
-import { UserComponent } from './user';
-import { TasksComponent } from './tasks';
 
 @Component({
   selector: 'app-root',
-  imports: [HeaderComponent, UserComponent, TasksComponent],
+  standalone: false,
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
-export class App {
+export class AppComponent {
   users = DUMMY_USERS;
   selectedUserId?: string;
 
